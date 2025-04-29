@@ -3,7 +3,7 @@ import math
 import matplotlib.pyplot as plt
 import pandas as pd
 
-
+# Loading data into python
 data = np.genfromtxt('2024_sunrise_times_in_conway_ar.csv', dtype= 'str', delimiter=',', skip_header=1)
 
 print(data[0][1])
