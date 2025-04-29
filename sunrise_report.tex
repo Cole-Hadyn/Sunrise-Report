@@ -1,6 +1,12 @@
 \documentclass[11pt]{article}
 
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{url}
 \usepackage[backend=biber,style=apa]{biblatex}
+\usepackage{amsmath}
+
+\addbibresource{refs.bib}
 
 \author{Hadyn Cole W.}
 \title{Sunrise Report for Conway, AR During 2024}
@@ -9,10 +15,17 @@
 \begin{document}
 \maketitle
 
+\begin{abstract}
+This paper analyzes the collection of times of each sunrise during the year 2024 in the town of Conway Arkansas.
+With this data we can compare the average sunrise of each month during that year.
+Doing this gives us ab better understanding of the world we live in. 
+\end{abstract}
 
 \section{Introduction}
 \input{sr_intro}
 
+\section{Analysis}
+\input{analysis.tex}
 
 
 
@@ -23,9 +36,7 @@
 
 
 
+\printbibliography
 
 
-
-\bibliographystyle{plain}
-\bibliography{references}
 \end{document}
