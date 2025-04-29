@@ -1,14 +1,23 @@
 \subsection{Data Collection}
-	Data found through~\parencite{timeanddate.com} had to be processed before finding the averages of each month could be found.
-Due to the data being represented as a series of string in columns in a text file, all values had to be converted into intergers.
-This was due by usign python code to take the file, and separate each the string by the colon use in the values collected for times.
 
+\indent Data was collected from the website timeanddate.com, which tracks the the amount of daylight each day all over the country.
+Sunrise times were logged in a .csv file in columns for each month.
+They were logged as strings in the format of hh:mm, for hours and minutes.
+
+Before analysis could begin, data found through~\parencite{timeanddate.com} had to be processed before finding the averages of each month could be found.
+All values of interest represented as strings had to be converted into intergers.
+This was done by using python code to separate each the string by the colon use in the values collected for times.
+From there the minutes had to be coverted to a decimal of the hour, and recombined with the hour the minute are in.
+With that the data was now able to be analyzed to find the average sunrise time of each month.
 
 \subsection{Data Aanlysis}
-	With sunrises times from all 365 days in 2024 available the averages of each month were taken.
-This was done using the general formula for calculate mean.
-$\text{Average} = \frac{Sum of times of each sunrise in the month}{Numer of days in the month}$
 
+\indent With sunrises times from all 365 days in 2024 available the averages of each month were taken.
+This was done using the general formula for calculate mean.
+
+\begin{equation}
+\text{Average} = \frac{\text{Sum of times of each sunrise in the month}}{\text{Numer of days in the month}}
+\end{equation}
 Once this was done for each month the twelve calculated averages were plotted on a graph with months over \ref{fig:sunrise}.
 
 \begin{figure}[ht]
