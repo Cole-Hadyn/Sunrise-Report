@@ -58,6 +58,32 @@ print("Mean of each month:")
 print(monthly_means)
 
 
+
+
+
+# Load CSV data
+df = pd.read_csv("month_means.csv")
+
+# Create figure
+fig, ax = plt.subplots(figsize=(4, len(df) * 0.4 + 1))  # Adjust height based on number of rows
+ax.axis('off')
+
+# Create table
+table = ax.table(cellText=df.values,
+                 colLabels=df.columns,
+                 cellLoc='center',
+                 loc='center')
+
+table.auto_set_font_size(False)
+table.set_fontsize(10)
+table.scale(1.2, 1.2)
+
+# Save as image
+plt.savefig("data_table_from_csv.png", bbox_inches='tight', dpi=300)
+plt.show()
+
+
+# Create chart of data
 plt.figure(figsize=(10, 6))
 monthly_means.plot(kind='bar', color='skyblue', edgecolor='black')
 plt.title('Average Sunrise for 2024 in Conway, AR (in Decimal Hours)')
