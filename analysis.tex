@@ -1,6 +1,6 @@
 \subsection{Data Collection}
 
-\indent Data was collected from the website timeanddate.com, which tracks the the amount of daylight each day all over the country.
+Data was collected from the website timeanddate.com, which tracks the the amount of daylight each day all over the country.
 Sunrise times were logged in a .csv file in columns for each month.
 They were logged as strings in the format of hh:mm, for hours and minutes.
 
@@ -12,15 +12,23 @@ With that the data was now able to be analyzed to find the average sunrise time 
 
 \subsection{Data Aanlysis}
 
-\indent With sunrises times from all 365 days in 2024 available the averages of each month were taken.
-This was done using the general formula for calculate mean.
+With sunrises times from all 365 days in 2024 available the averages of each month were taken \ref{fig:averages}.
+This was done using the general formula for calculate mean\ref{eqn:average}.
 
 \begin{equation}
 \text{Average} = \frac{\text{Sum of sunrise times in the month}}{\text{Numer of days in the month}}
+\label{eqn:average}
 \end{equation}
-Once this was done for each month the twelve calculated averages were plotted on a graph with months over \ref{fig:sunrise}.
+Once this was done for each month the twelve calculated averages were plotted on a graph with sunrise time over months \ref{fig:sunrise}.
 
-\begin{figure}[ht]
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\textwidth]{data_table_from_csv.png}
+	\caption{List of the average sunrises for each month in 2024}
+	\label{fig:averages}
+\end{figure}
+
+\begin{figure}[h]
 	\centering
 	\includegraphics[width=0.7\textwidth]{Figure_1.png}
 	\caption{Graph of the sunrise averages for each month in the year 2024}
